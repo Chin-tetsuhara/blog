@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -26,8 +26,8 @@ class PostController extends Controller
     
     public function store(Request $request, Post $post)
     {
-        $input = $request['post'];
-        $post->fill($input)->save();
-        return redirect('/posts/' . $post->id);
+        $input = $requst['post'];
+        $post->rill($input)->save();
+        return redirect('/posts?' . $post->id);
     }
 }
