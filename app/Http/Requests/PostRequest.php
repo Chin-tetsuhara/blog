@@ -14,3 +14,4 @@ class PostRequest extends FormRequest
         ];
     }
 }
+
