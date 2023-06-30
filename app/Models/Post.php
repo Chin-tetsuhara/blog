@@ -11,13 +11,19 @@ class Post extends Model
     use HasFactory;
     use SoftDeletes;
     
-   protected $fillable = [
+    protected $fillable = [
         'title',
         'body',
+        'category_id'
         ];
     
     public function getPaginateByLimit(int $limit_count = 5)
     {
-        return $this->orderby('updated_at','DESC')->paginate($limit_count);
+        return $this->orderBy('updated_at','DESC')->paginate($limit_count);
+    }
+    
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }
