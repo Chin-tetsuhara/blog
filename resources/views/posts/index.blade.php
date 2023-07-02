@@ -38,5 +38,14 @@
             </script>
             <h2>ログインユーザー:{{ Auth::user()->name }}</h2>
         </x-app-layout>
+        <div>
+            @foreach($questions as $question)
+                <div>
+                    <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                        {{ $question['title'] }}
+                    </a>
+                </div>
+            @endforeach
+        </div>
     </body>
 </html>

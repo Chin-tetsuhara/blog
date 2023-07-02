@@ -9,9 +9,9 @@
         
     </head>
     <body>
-        <x-app-layout></x-app-layout>
+        <x-app-layout>
             <x-slot name="header">
-                Post Show
+                Post Create
             </x-slot>
             <h1>Blog Name</h1>
             <form action="/posts" method="POST">
